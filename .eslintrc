@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "airbnb-base",
+    "prettier",
+    "plugin:jest/recommended"
+  ],
+  "env": {
+    "node": true
+  },
+  "plugins": [
+    "prettier"    
+  ],
+  "rules": {
+    "no-underscore-dangle": 0,
+    "no-console": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 100
+      }
+    ]
+  }
+}

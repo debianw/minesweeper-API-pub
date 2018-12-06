@@ -1,0 +1,36 @@
+{
+  "name": "minesweeper-API",
+  "version": "1.0.0",
+  "description": "API test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node service",
+    "test": "NODE_ENV=test jest --detectOpenHandles --logHeapUsage --verbose --forceExit ./__TEST__",
+    "test:coverage": "NODE_ENV=test jest --collectCoverageFrom=lib/**.js --coverage ./__TEST__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debianw/minesweeper-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/debianw/minesweeper-API/issues"
+  },
+  "homepage": "https://github.com/debianw/minesweeper-API#readme",
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.3"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
