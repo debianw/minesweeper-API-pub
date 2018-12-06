@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node service",
+    "start:dev": "nodemon service.js",
+    "debug": "node --inspect service.js",
     "test": "NODE_ENV=test jest --detectOpenHandles --logHeapUsage --verbose --forceExit ./__TEST__",
     "test:coverage": "NODE_ENV=test jest --collectCoverageFrom=lib/**.js --coverage ./__TEST__"
   },
@@ -28,9 +30,11 @@
     "eslint-plugin-jest": "^22.1.2",
     "eslint-plugin-prettier": "^3.0.0",
     "jest": "^23.6.0",
+    "nodemon": "^1.18.7",
     "prettier": "^1.15.3"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4"
   }
 }
