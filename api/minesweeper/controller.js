@@ -47,9 +47,16 @@ const revealCell = async ({ gameId, cell }) => {
 
 const listOfGames = () => Game.find({ isActive: true });
 
+/**
+ * Return a single game
+ */
+
+const findGame = id => Game.findOne({ _id: id });
+
 //
 module.exports = {
   listOfGames,
+  findGame,
   createGame,
   revealCell,
 };
