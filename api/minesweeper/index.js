@@ -43,9 +43,21 @@ app.put('/:id', () => {
   throw new Error('Update game not implemented');
 });
 
-//
-app.post('/:id/reveal', () => {
-  throw new Error('Reveal position not implemented');
+/**
+ * Reveal cell
+ */
+
+app.post('/:id/reveal-cell', async (req, res, next) => {
+  try {
+    const cell = req.body;
+    const gameId = req.params.id;
+
+    const cellRevealed = await controller.revealCell({ gameId, cell });
+
+    res.json(cellRevealed);
+  } catch (err) {
+    next(err);
+  }
 });
 
 //
